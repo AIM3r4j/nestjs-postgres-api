@@ -1,0 +1,52 @@
+### Get all auths
+
+GET http://localhost:3000/auth?page=1&limit=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDkwNzEwZGU0ZmNiNGExMTY0MGY3ZTEiLCJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjg3MzcwNzQxLCJleHAiOjE2ODc0NTcxNDF9.Kjlw7_KRqBpIyQehDCHnlK1MYxmN357telsxxbnNTzw
+Content-Type: application/json
+
+### Get specific auth with id
+
+GET http://localhost:3000/auth/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDkwNzEwZGU0ZmNiNGExMTY0MGY3ZTEiLCJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjg3MzcwNzQxLCJleHAiOjE2ODc0NTcxNDF9.Kjlw7_KRqBpIyQehDCHnlK1MYxmN357telsxxbnNTzw
+Content-Type: application/json
+
+### Create new auth
+
+POST http://localhost:3000/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDkwNzEwZGU0ZmNiNGExMTY0MGY3ZTEiLCJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjg3MzcwNzQxLCJleHAiOjE2ODc0NTcxNDF9.Kjlw7_KRqBpIyQehDCHnlK1MYxmN357telsxxbnNTzw
+Content-Type: application/json
+
+{
+  "username": "user1@mail.com",
+  "password": "user1",
+  "roles": ["user"]
+}
+
+### Login with auth
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "user1@mail.com",
+  "password": "user1"
+}
+
+### Update auth with specific id
+
+PATCH http://localhost:3000/auth/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDkwNzEwZGU0ZmNiNGExMTY0MGY3ZTEiLCJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjg3MzcwNzQxLCJleHAiOjE2ODc0NTcxNDF9.Kjlw7_KRqBpIyQehDCHnlK1MYxmN357telsxxbnNTzw
+Content-Type: application/json
+
+{
+  "username": "user1@mail.com",
+  "password": "user1",
+  "roles": ["user","admin"]
+}
+
+
+### DELETE auth
+
+DELETE http://localhost:3000/auth/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDkwNzEwZGU0ZmNiNGExMTY0MGY3ZTEiLCJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjg3MzcwNzQxLCJleHAiOjE2ODc0NTcxNDF9.Kjlw7_KRqBpIyQehDCHnlK1MYxmN357telsxxbnNTzw
+Content-Type: application/json
